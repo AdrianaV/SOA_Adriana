@@ -1,0 +1,156 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.soacookbook.com/eden" xmlns:tns="http://ns.soacookbook.com/eden" elementFormDefault="qualified">
+- <xsd:annotation>
+  <xsd:documentation>Factura schema as Garden of Eden design.</xsd:documentation> 
+  </xsd:annotation>
+  
+  <xsd:element name="n_fac" type="tns:n_factura" >
+        <xsd:simpleType>
+          <xsd:restriction base="xs:integer">
+              <xsd:pattern value="[0-9][0-9][0-9][0-9]"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:element>  
+  
+  <xsd:element name="empresa" type="tns:datosEmpresa" />
+  <xsd:element name="nombre" type="xsd:string" /> 
+  <xsd:element name="direccion" type="xsd:string" /> 
+  <xsd:element name="cuidad" type="xsd:string" /> 
+  <xsd:element name="provincia" type="xsd:string" /> 
+  <xs:element name="telefono" type="xsd:integer">
+      <xs:simpleType>
+          <xs:restriction base="xsd:integer">
+              <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+          </xs:restriction>
+      </xs:simpleType>
+  </xs:element>
+
+  <xsd:complexType name="datosEmpresa" mixed="true">
+      <xsd:sequence>
+          <xsd:element ref="tns:nombre" /> 
+          <xsd:element ref="tns:direccion" /> 
+          <xsd:element ref="tns:ciudad" /> 
+          <xsd:element ref="tns:provincia" /> 
+          <xsd:element ref="tns:telefono" /> 
+     </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  
+  <xsd:element name="cliente" type="tns:datosCliente" />
+  <xsd:element name="n_cli" type="xsd:positiveInteger" >
+      <xsd:simpleType>
+          <xsd:restriction base="xs:integer">
+              <xsd:pattern value="[0-9][0-9][0-9][0-9]"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:element>
+  <xsd:element name="nombre" type="xsd:string" /> 
+  <xsd:element name="direccion" type="xsd:string" /> 
+  <xsd:element name="cuidad" type="xsd:string" /> 
+  <xsd:element name="provincia" type="xsd:string" /> 
+  <xsd:complexType name="datosCliente" >
+      <xsd:sequence>
+          <xsd:element ref="tns:n_cli" />
+          <xsd:element ref="tns:nombre" /> 
+          <xsd:element ref="tns:direccion" /> 
+          <xsd:element ref="tns:ciudad" /> 
+          <xsd:element ref="tns:provincia" /> 
+      </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="factura" type="tns:datosFactura" />
+  <xsd:element name="n_ped" type="xsd:positiveInteger" >
+      <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+              <xsd:pattern value="[0-9][0-9][0-9][0-9]"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:element>    
+  <xsd:element name="fecha" type="xsd:date" /> 
+  <xsd:element name="iva" type="xsd:double" /> 
+  <xsd:element name="pago" type="xsd:string" /> 
+  <xsd:element name="moneda" type="xsd:string" /> 
+  <xsd:complexType name="datosFactura">
+      <xsd:sequence>
+          <xsd:element ref="tns:n_ped" />
+          <xsd:element ref="tns:fecha" /> 
+          <xsd:element ref="tns:iva" /> 
+          <xsd:element ref="tns:pago" /> 
+          <xsd:element ref="tns:moneda" /> 
+      </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="datosF" type="tns:datosFactura" />
+  <xsd:element name="fecha" type="xsd:date" /> 
+  <xsd:element name="iva" type="xsd:double" /> 
+  <xsd:element name="formaPago" type="xsd:string" > 
+      <xsd:simpleType>
+          <xsd:choice>
+              <xsd:restriction base="xs:string">
+                  <xsd:pattern value="[efectivo]|[tarjeta]|[cheque]"/>
+              </xsd:restriction>
+          </xsd:choice>
+      </xsd:simpleType>
+  </xsd:element>
+
+<xsd:element name="moneda" type="xsd:string" > 
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="preserve"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xsd:element>
+  <xsd:complexType name="datosFactura">
+      <xsd:sequence>
+          <xsd:element ref="tns:fecha" /> 
+          <xsd:element ref="tns:iva" /> 
+          <xsd:element ref="tns:pago" /> 
+          <xsd:element ref="tns:moneda" /> 
+      </xsd:sequence>
+  </xsd:complexType>
+
+<xsd:element name="producto" type="tns:datosProducto" />
+
+  <xsd:element name="codigo" type="xsd:string" >
+      <xsd:simpleType>
+          <xsd:restriction base="xs:string">
+              <xsd:minLength value="5"/>
+              <xsd:maxLength value="15"/>
+              <xsd:pattern value="[a-zA-Z0-9]{5,15}"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:element> 
+  <xsd:element name="desc" type="xsd:string" >
+      <xsd:simpleType>
+          <xsd:restriction base="xs:string">
+              <xsd:minLength value="1"/>
+              <xsd:maxLength value="100"/>
+              <xsd:pattern value="[a-zA-Z0-9]{1,100}"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:element>
+  <xsd:element name="cantidad" type="xsd:integer"> 
+      <xsd:simpleType>
+          <xsd:restriction base="xs:integer">
+              <xsd:minLength value="1"/>
+              <xsd:maxLength value="500"/>
+              <xsd:pattern value="[0-9]{1-500}"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:element>
+  <xsd:element name="precio" type="xsd:double" /> 
+  <xsd:complexType name="datosProducto">
+      <xsd:sequence>
+          <xsd:element ref="tns:codigo" /> 
+          <xsd:element ref="tns:desc" /> 
+          <xsd:element ref="tns:cantidad" /> 
+          <xsd:element ref="tns:precio" /> 
+      </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>        
+        
+        
+        
+        
+        

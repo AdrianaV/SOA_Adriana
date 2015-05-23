@@ -1,0 +1,7 @@
+1.	Describa brevemente cuál es el problema principal que se intenta resolver con SOA?
+
+
+Se intenta disminuir la brecha entre la gente de negocios y TI.
+
+
+Duplicación de funcionalidad y aislamiento de procesos.
