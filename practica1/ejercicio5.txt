@@ -1,0 +1,16 @@
+ejercicio 5
+
+El W3C desarrolla especificaciones técnicas y directrices a través de un proceso 
+que ha sido diseñado para maximizar el consenso sobre el contenido de un informe 
+técnico, de forma que se pueda asegurar la alta calidad técnica y editorial, así 
+como obtener un mayor apoyo desde el W3C y desde la comunidad en general.
+
+El W3C ofrece varias vistas de sus especificaciones, incluyendo:
+
+---Por tema de la tecnología [ingles] (como por ejemplo, “todas las especificaciones
+   relacionadas con HTML”)
+---Por estado [ingles] (esta es una aproximación a la vista "clásica" de los informes 
+   técnicos (TR), con publicaciones recientes al principio y después todas las 
+   espeficificaciones agrupadas por su estado, desde Recomendaciones a borradores de trabajo)
+---Por fecha [ingles] (las más recientes al principio)
+---Por grupo [ingles] (quien desarrolla la especificación)

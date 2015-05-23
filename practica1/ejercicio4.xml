@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cd SYSTEM "Cd.dtd">
+<cd>
+<name>My CD Collection</name>
+<title>Title</title>
+<body>Artist</body>
+</cd>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE libro SYSTEM "libro.dtd">
+
+<?xml-stylesheet type="text/xsl" href="/observatorio/web/libro.xsl"?>
+
+<libro>
+
+<autor>Autor: Profesores </autor>
+
+<titulo>Título: Apuntes de Informática</titulo>
+
+<capitulo>
+
+<titulocap>Capitulo 1</titulocap>
+
+<texto>XML es un metalenguaje....</texto>
+
+</capitulo>
+
+</libro>

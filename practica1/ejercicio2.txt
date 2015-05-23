@@ -1,0 +1,5 @@
+ejercicio 2
+
+Nos muestra un arbol XML
+Porque XML describe los datos mientras que HTML nos 
+presenta la informacion de los datos 

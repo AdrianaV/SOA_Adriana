@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda 
+[
+<!ELEMENT tienda (planta,footer)>
+<!ELEMENT planta (id,tipo,nombre)>
+
+<!ENTITY nbsp "&#xA0;">
+<!ENTITY writer "Writer: Adriana Villarroel.">
+<!ENTITY copyright "Copyright: W3Schools.">
+]>
+<tienda>
+    <planta id="001">
+        <tipo>Ornamental</tipo>
+        <nombre>Dallas</nombre>
+    </planta>
+    <planta id="002">
+        <tipo>Medicinal</tipo>
+        <nombre>Mirra</nombre>
+    </planta>
+    <planta id="003">
+        <tipo>Medicinal</tipo>
+        <nombre>Ortiga</nombre>
+    </planta>
+    <planta id="004">
+        <tipo>Peligrosa</tipo>
+        <nombre>Ricino</nombre>
+    </planta> 
+    <footer>&writer;&nbsp;&copyright;</footer>
+</tienda>

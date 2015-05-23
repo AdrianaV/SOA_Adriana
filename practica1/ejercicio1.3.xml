@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restaurante 
+[
+<!ELEMENT restaurante  (menu,footer)>
+<!ELEMENT planta (id,tipo,nombre)>
+
+<!ENTITY nbsp "&#xA0;">
+<!ENTITY writer "Writer: Adriana Villarroel.">
+<!ENTITY copyright "Copyright: W3Schools.">
+]>
+<restaurante>
+    <menu id="001">
+        <tipo>Desayuno</tipo>
+        <nombre>Completo</nombre>
+        <precio>$4.00</precio>
+    </menu>
+    <menu id="002">
+        <tipo>Desayuno</tipo>
+        <nombre>Semi-Completo</nombre>
+        <precio>$3.00</precio>
+    </menu>
+    <menu id="003">
+        <tipo>Almuerzo</tipo>
+        <nombre>Completo</nombre>
+        <precio>$4.00</precio>
+    </menu>
+    <menu id="004">
+        <tipo>Merienda</tipo>
+        <nombre>Normal</nombre>
+        <precio>$2.50</precio>
+    </menu>
+    <footer>&writer;&nbsp;&copyright;</footer>
+</restaurante>

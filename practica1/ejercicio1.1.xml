@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coleccion 
+[
+<!ENTITY nbsp "&#xA0;">
+<!ENTITY writer "Writer: Adriana Villarroel.">
+<!ENTITY copyright "Copyright: W3Schools.">
+]>
+<coleccion>
+    <cd id="001">
+        <album>Palabras del silencio</album>
+        <anio>2008</anio>
+        <cantante>Luis Fonsi</cantante>
+        <cancion>Aunque estes con el</cancion>
+    </cd>
+    <cd id="002">
+        <album>Palabras del silencio</album>
+        <anio>2008</anio>
+        <cantante>Luis Fonsi</cantante>
+        <cancion>Aqui estoy yo</cancion>
+    </cd>
+    <cd id="003">
+        <album>Barrio Fino</album>
+        <anio>2004</anio>
+        <cantante>Daddy Yankee</cantante>
+        <cancion>No me dejes Solo</cancion>
+    </cd>
+    <cd id="004">
+        <album>Un nuevo sol</album>
+        <anio>2011</anio>
+        <cantante>Axel</cantante>
+        <cancion>Te voy amar</cancion>
+    </cd>
+    <footer>&writer;&nbsp;&copyright;</footer>
+</coleccion>
