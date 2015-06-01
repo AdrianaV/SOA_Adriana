@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            targetNamespace = "http://www.trabajo.com/alumno alumno.xsd"
+            xmlns:alu="http://www.trabajo.com/alumno"
+            elementFormDefault = "qualified"
+            xmlns:per="http://www.trabajo.com/persona" 
+            xmlns:doc="http://www.trabajo.com/docencia">
+    
+    <xsd:import namespace = "http://www.trabajo.com/persona"
+                 schemaLocation = "persona.xsd" />
+    <xsd:import namespace = "http://www.trabajo.com/docencia"
+                 schemaLocation = "docencia.xsd" />
+    
+    <xsd:annotation>
+        <xsd:documentation>
+            Schema de ejercicio3_alumno.xml
+        </xsd:documentation>
+    </xsd:annotation>
+    
+    <xsd:element name="persona">
+        <xsd:complexType>
+            <xsd:element name = "persona" type = "per: persona" 
+                         maxOccurs = "unbounded" />
+            <xsd:element name = "docencia" type = "doc: docencia" 
+                         maxOccurs = "unbounded" /> 
+        </xsd:complexType>  
+    </xsd:element> 
+</xsd:schema>
+

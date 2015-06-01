@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<personas xmlns:xsi="http://www.w3.org/201/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="ejercicio2_persona.xsd">
+    
+   
+<persona>
+    <nombre>Juan Perez</nombre>
+    <nacimiento dia="3" mes="Mayo" anyo="1986"/>
+    <pais>
+       <call>12 de Octubre y General Foch</call>
+       <ciudad>Quito</ciudad>
+       <provincia>Pichincha</provincia>
+       <pai>Ecuador</pai>
+    </pais>
+    <hombre />
+ </persona>
+ <persona>
+    <nombre>María López</nombre>
+    <direccion>
+       <calle>Tamayo n12 y Francisco Salazar</calle>
+       <ciudad>Quito</ciudad>
+       <provincia>Pichincha</provincia>
+       <pai>Ecuador</pai>
+    </direccion>
+    <direccion>
+       <calle>Pichincha 605 entre Clemente Ballén y 10 de Agosto</calle>
+       <ciudad>Guayaquil</ciudad>
+       <provincia>Guayas</provincia>
+       <pai>Ecuador</pai>
+    </direccion>
+    <mujer />
+ </persona>
+    
+</personas>
