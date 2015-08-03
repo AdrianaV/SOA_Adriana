@@ -5,6 +5,7 @@
  */
 package soaesfot.examen.tienda.ws.client;
 
+import esfot.soa.PeliculaTO;
 import esfot.soa.TiendaDvdWS_Service;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -53,14 +54,21 @@ public class ExamenServlet extends HttpServlet {
             
             try 
             { 
-                esfot.soa.TiendaDvdWS port = service.getTiendaDvdWSPort();             
-                String director=request.getParameter("d");             
-                java.lang.Object result = port.buscaDirector(director);
-                out.println("List = " + result);
+                esfot.soa.TiendaDvdWS port =  service.getTiendaDvdWSPort();
+                java.lang.String director = request.getParameter("NombreDirector");
+                
+                List<PeliculaTO> listar = port.buscaDirector(director);
+                
+                for (PeliculaTO a : listar) 
+                {
+                    out.println("<p><i>Director:</i>" + a.getDirector()+ "</p>");
+                    out.println("<p><i>Titulo:</i>" + a.getTitulo()+ "</p>" );
+                    out.println("<p><i>Precio:</i>" + a.getPrecio()+ "</p>" );
+                }
             } 
             catch (Exception ex) 
             {
-                out.println("No existe ese director");
+                // Manejo de excepciones
             }
             
             out.println("</body>");
