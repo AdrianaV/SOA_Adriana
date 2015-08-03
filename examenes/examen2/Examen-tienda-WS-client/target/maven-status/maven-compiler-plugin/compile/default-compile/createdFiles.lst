@@ -1,0 +1,8 @@
+esfot\soa\package-info.class
+esfot\soa\BuscaDirector.class
+esfot\soa\BuscaDirectorResponse.class
+esfot\soa\PeliculaTO.class
+esfot\soa\TiendaDvdWS.class
+esfot\soa\ObjectFactory.class
+esfot\soa\TiendaDvdWS_Service.class
+soaesfot\examen\tienda\ws\client\ExamenServlet.class
